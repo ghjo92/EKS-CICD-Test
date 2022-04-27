@@ -10,7 +10,6 @@ phases:
       - chmod +x ./kubectl
       - mv ./kubectl /usr/local/bin/kubectl
       - mkdir ~/.kube
-      - aws sts get-caller-identity
       - aws eks update-kubeconfig --name my-eks --region ap-northeast-2
       - aws sts get-caller-identity
       - kubectl get pod -n kube-system
